@@ -5,13 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+  <title>My very own Azure Static Web App</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+    $.get( "/api/TodoList", function(data) {
+      $("#res").text("Title: '" + data[0].title + "'' Owner: '" + data[0].owner + "'");
+    }, "json" );
+
+    });
+  </script>
 </head>
 
 <body>
   <main>
-    <h1>Vanilla JavaScript App</h1>
+    <h1>Testing to fetch data from APIM backend..</h1>
+    <h3 id="res"></h3>
   </main>
+
+  
 </body>
 
 </html>
