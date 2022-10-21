@@ -11,8 +11,8 @@
   <script>
     $(document).ready(function(){
 
-    $.get( "https://api-t.billerudkorsnas.com/test-xapi-user/v1/api/users/auth0%7C633bf6ee5a730922049adab9", function(data) {
-      $("#res").text("Id: '" + data.id + "' Email: '" + data.emailAddress + "'");
+    $.get( "https://bktest.azure-api.net/api/TodoList", function(data) {
+      $("#res").text("Id: '" + data[0].id + "' title: '" + data[0].title + "'");
     }, "json" );
 
     });
